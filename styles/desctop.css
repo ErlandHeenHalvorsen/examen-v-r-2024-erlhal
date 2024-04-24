@@ -1,0 +1,31 @@
+:root {
+  --primaryColor: #00171f;
+  --secondaryColor: #c5071b;
+  --textColor: #e1efe6;
+  --ctaColor: #f48e2b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primaryColor);
+  color: var(--textColor);
+  font-family: "Oswald", sans-serif;
+}
+.headerCol {
+  display: flex;
+  max-width: 45%;
+  min-width: 350px;
+  width: 800px;
+  border-radius: 0px 0px 12px 0px;
+  background: #c5071b;
+}
+h1 {
+  color: var(--textColor);
+  -webkit-text-stroke: 4px black;
+  font-size: 5rem;
+  padding: 0;
+  margin-left: 5%;
+}
