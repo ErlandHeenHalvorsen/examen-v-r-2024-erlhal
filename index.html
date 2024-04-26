@@ -11,7 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/7c44b2e8ec.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7c44b2e8ec.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -20,33 +24,27 @@
           <h1>GameSphere</h1>
         </div>
       </div>
-      <div class="headerRow">
-        <div class="carousel">
-          <button class="prev">
-            <i class="fa-solid fa-chevron-left"></i></button>
-          <button class="next">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
+      <div class="slider">
+        <div class="slide__inner">
+          <div class="slider__item">
+            <img
+              src="https://pyxis.nymag.com/v1/imgs/3a8/276/54608c0aa57dbba1a57ca55657e54bf70a-12-rockstar-games-lede.rhorizontal.w1100.jpg"
+            />
+          </div>
+          <div class="slider__item">
+            <img
+              src="https://pyxis.nymag.com/v1/imgs/3a8/276/54608c0aa57dbba1a57ca55657e54bf70a-12-rockstar-games-lede.rhorizontal.w1100.jpg"
+            />
+          </div>
+          <div class="slider__item">
+            <img
+              src="https://pyxis.nymag.com/v1/imgs/3a8/276/54608c0aa57dbba1a57ca55657e54bf70a-12-rockstar-games-lede.rhorizontal.w1100.jpg"
+            />
+          </div>
         </div>
+        <button class="slide_button previous_slide">prev</button>
+        <button class="slide_button next_slide">next</button>
       </div>
-      <div class="indicators">
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-        <div class="indicator"></div>
-      </div>
-
-      <div class="slide ">
-        <img src="#" alt="#" width="200"/>
-        <div class="caption">
-          <h2>Penguin UI</h2>
-          <p>
-            As a dev, I've always wanted a framework that's flexible and customizable.<br>
-            So, I built Penguin UI - a library of pre-made CSS classes and custom JS components.
-          </p>
-        </div>
-      </div>
-
-    </div>
     </header>
     <main>
       <div class="mainBanner">
@@ -55,26 +53,29 @@
       <div class="mainRow">
         <div class="mainCol">
           <div class="card">
-            <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="">
+            <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
             <div class="cardBanner1"><h4>Red Dead Redemption 2</h4></div>
             <div class="cardBanner2"><h4>10/10</h4></div>
-            <p>An epic journey trough the American wild midwest.
-              One of the best gaming experiences i have had these 
-              last ten years.</p>
+            <p>
+              An epic journey trough the American wild midwest. One of the best
+              gaming experiences i have had these last ten years.
+            </p>
             <button>Read More</button>
           </div>
         </div>
         <div class="mainCol">
           <div class="card">
-            <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="">
+            <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
             <div class="cardBanner1"><h4>Red Dead Redemption 2</h4></div>
             <div class="cardBanner2"><h4>10/10</h4></div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi aperiam sequi consequatur facere iste sed debitis tempora, esse iusto officiis veniam eos, optio saepe. Consequatur unde minus nostrum culpa quisquam.</p>
+            <p>
+              An epic journey trough the American wild midwest. One of the best
+              gaming experiences i have had these last ten years.
+            </p>
             <button>Read More</button>
           </div>
         </div>
       </div>
-      
     </main>
   </body>
 </html>
