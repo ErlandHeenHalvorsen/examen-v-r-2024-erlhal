@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/desctop.css" />
+    <link rel="stylesheet" href="styles/desktop.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +15,9 @@
       src="https://kit.fontawesome.com/7c44b2e8ec.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js" type="module"></script>
+    <script src="modules/index.js" type="module"></script>
+    <!---<script src="modules/carousell.js" type="module"></script>-->
+    <script src="modules/cards.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -30,16 +32,30 @@
             <img
               src="https://pyxis.nymag.com/v1/imgs/3a8/276/54608c0aa57dbba1a57ca55657e54bf70a-12-rockstar-games-lede.rhorizontal.w1100.jpg"
             />
+            <div class="slider_content">
+              <span class="slider_title"> Title </span>
+              <p class="slider_text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                aliquam minima nobis dicta reiciendis ex consequuntur nulla
+                molestiae accusantium vitae esse, aut ad adipisci ipsa deserunt
+                animi earum exercitationem dolores!
+              </p>
+              <button class="sliderCTA">Button</button>
+            </div>
           </div>
+
           <div class="slider__item">
             <img
               src="https://pyxis.nymag.com/v1/imgs/3a8/276/54608c0aa57dbba1a57ca55657e54bf70a-12-rockstar-games-lede.rhorizontal.w1100.jpg"
             />
+            <button class="sliderCTA">hello</button>
           </div>
+
           <div class="slider__item">
             <img
               src="https://pyxis.nymag.com/v1/imgs/3a8/276/54608c0aa57dbba1a57ca55657e54bf70a-12-rockstar-games-lede.rhorizontal.w1100.jpg"
             />
+            <button class="sliderCTA">hello</button>
           </div>
         </div>
         <button class="slide_button previous_slide">prev</button>
@@ -50,32 +66,12 @@
       <div class="mainBanner">
         <h3>GameSphere</h3>
       </div>
-      <div class="mainRow">
-        <div class="mainCol">
-          <div class="card">
-            <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
-            <div class="cardBanner1"><h4>Red Dead Redemption 2</h4></div>
-            <div class="cardBanner2"><h4>10/10</h4></div>
-            <p>
-              An epic journey trough the American wild midwest. One of the best
-              gaming experiences i have had these last ten years.
-            </p>
-            <button>Read More</button>
-          </div>
-        </div>
-        <div class="mainCol">
-          <div class="card">
-            <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
-            <div class="cardBanner1"><h4>Red Dead Redemption 2</h4></div>
-            <div class="cardBanner2"><h4>10/10</h4></div>
-            <p>
-              An epic journey trough the American wild midwest. One of the best
-              gaming experiences i have had these last ten years.
-            </p>
-            <button>Read More</button>
-          </div>
-        </div>
-      </div>
+      <div class="mainRow"></div>
+      <div class="mainRow"></div>
+      <div class="mainRow"></div>
+      <div class="mainRow"></div>
+      <div class="mainRow"></div>
+      <div class="mainRow"></div>
     </main>
   </body>
 </html>

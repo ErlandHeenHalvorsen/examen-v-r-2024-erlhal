@@ -3,6 +3,32 @@
   --secondaryColor: #c5071b;
   --textColor: #e1efe6;
   --ctaColor: #f48e2b;
+  --color-rosewater: #f5e0dc;
+  --color-flamingo: #f2cdcd;
+  --color-pink: #f5c2e7;
+  --color-mauve: #cba6f7;
+  --color-red: #f38ba8;
+  --color-maroon: #eba0ac;
+  --color-peach: #fab387;
+  --color-yellow: #f9e2af;
+  --color-green: #a6e3a1;
+  --color-teal: #94e2d5;
+  --color-sky: #89dceb;
+  --color-sapphire: #74c7ec;
+  --color-blue: #89b4fa;
+  --color-lavender: #b4befe;
+  --color-text: #cdd6f4;
+  --color-subtext1: #bac2de;
+  --color-subtext0: #a6adc8;
+  --color-overlay2: #9399b2;
+  --color-overlay1: #7f849c;
+  --color-overlay0: #6c7086;
+  --color-surface2: #585b70;
+  --color-surface1: #45475a;
+  --color-surface0: #313244;
+  --color-base: #1e1e2e;
+  --color-mantle: #181825;
+  --color-crust: #11111b;
 }
 * {
   margin: 0;
@@ -10,8 +36,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--primaryColor);
-  color: var(--textColor);
+  background-color: var(--color-mantle);
+  color: var(--color-text);
   font-family: "Oswald", sans-serif;
 }
 .headerCol {
@@ -34,7 +60,7 @@ h1 {
   overflow: hidden;
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/6;
 }
 
 .slide__inner {
@@ -43,19 +69,30 @@ h1 {
   left: 0vw;
   display: flex;
   height: 100%;
-  transition-duration: 0.5s;
+  transition-duration: 0.8s;
 }
 
 .slider__item {
+  position: relative;
   width: 100vw;
   height: 100%;
-  padding: 0 1px 0 1px;
+  padding: 0 5px 0 1px;
 }
 img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: 50% 30%;
+}
+.slider_content {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .slide_button {
   position: absolute;
@@ -79,13 +116,39 @@ img {
 .cardImg {
   max-width: 100%;
 }
+.sliderCTA {
+  font-size: 30px;
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: var(--textColor);
+  background-color: var(--ctaColor);
+}
+.slider_content {
+  background-color: rgb(0, 0, 0, 0.4);
+  padding: 5px 20px;
+  border-radius: 6px;
+}
+.slider_title {
+  font-size: 40px;
+  color: var(--textColor);
+}
+.slider_text {
+  padding: auto;
+}
 .card {
   display: inline-flexbox;
   min-width: 500px;
   transform: scale(95%);
-  border: 2px solid yellow;
+  border: 2px solid var(--ctaColor);
+  border-radius: 6px;
   padding-bottom: 20px;
   margin: 20px;
+  box-shadow: 2px 3px 8px black;
+  transition: 0.3s;
+}
+.card:hover {
+  scale: 101%;
 }
 .cardBanner1,
 .cardBanner2 {
