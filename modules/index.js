@@ -1,4 +1,6 @@
 import { baseUrl } from "./constants.js";
 import CarouselInit from "./carousell.js";
+import generateCard from "./cards.js";
 CarouselInit();
-console.log("hallo hallo");
+const mainRow = document.querySelector(`.mainRow`);
+mainRow.innerHTML = generateCard();

@@ -43,20 +43,20 @@
 //  },
 //  "meta": {}
 //}
-const mainRow = document.querySelectorAll(`.mainRow`);
-console.log(mainRow);
-mainRow.innerHTML = `<div class="mainCol">
+const mainRow = document.querySelector(`.mainRow`);
+
+function generateCard() {
+  let html = "";
+  for (let i = 0; i < 6; i++) {
+    html += `<div class="mainCol">
   <div class="card">
     <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
-
     <div class="cardBanner1">
       <h4>Red Dead Redemption 2</h4>
     </div>
-
     <div class="cardBanner2">
       <h4>10/10</h4>
     </div>
-
     <p>
       An epic journey trough the American wild midwest. One of the best gaming
       experiences i have had these last ten years.
@@ -67,19 +67,21 @@ mainRow.innerHTML = `<div class="mainCol">
 <div class="mainCol">
   <div class="card">
     <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
-
     <div class="cardBanner1">
       <h4>Red Dead Redemption 2</h4>
     </div>
-
     <div class="cardBanner2">
       <h4>10/10</h4>
     </div>
-
     <p>
       An epic journey trough the American wild midwest. One of the best gaming
       experiences i have had these last ten years.
     </p>
     <button>Read More</button>
   </div>
-</div>`;
+</div>
+`;
+  }
+  return html;
+}
+export default generateCard;
