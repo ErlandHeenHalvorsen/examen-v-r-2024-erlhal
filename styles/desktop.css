@@ -31,9 +31,14 @@
   --color-crust: #11111b;
 }
 * {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
   background-color: var(--color-mantle);
@@ -146,7 +151,6 @@ img {
   padding: 10px 0 10px 0;
   background-color: var(--secondaryColor);
   margin-bottom: 10px;
-  border-radius: 0 0 8px 0;
   justify-content: space-between;
 }
 .mainBannerColumn {
@@ -211,18 +215,22 @@ img {
 /*-------------Account---------Account-------------------*/
 /*-------------Account---------Account-------------------*/
 /*-------------Account---------Account-------------------*/
-
+#loginBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button,
+a {
+  cursor: pointer;
+}
 .loginCard {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   padding: 24px;
-  background-color: var(--color-crust);
-  border-radius: 20px;
-}
-
-.loginCard h1 {
-  color: var(--textColor);
-  text-transform: capitalize;
+  background-color: var(--color-surface1);
+  border: 2px solid var(--color-surface2);
+  border-radius: 8px;
 }
 form.login {
   width: 100%;
@@ -231,24 +239,41 @@ form.login {
 .inputWrapper {
   width: 100%;
   padding: 6px 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
+
 .inputWrapper input {
-  width: 100%;
-  padding: 6px 12px;
+  flex: 1;
+  padding: 10px 16px;
   font-size: 1em;
-  border-radius: 100px;
+  background-color: var(--color-base);
+  color: var(--color-text);
+  border: none;
+  border-top: 1px solid var(--color-surface1);
+  border-bottom: 1px solid var(--color-surface1);
+  border-radius: 6px;
 }
+
 .actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px;
 }
-.btn {
-  padding: 6px 10px;
+
+.loginBtn {
+  padding: 8px 16px 6px 16px;
   text-transform: uppercase;
   font-weight: bold;
-  border: none;
-  border-radius: 100px;
-  background-color: var(--ctaColor);
+  background-color: var(--color-rosewater);
+  border: 2px solid var(--color-rosewater);
+  border-radius: 8px;
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+  font-size: 1em;
 }

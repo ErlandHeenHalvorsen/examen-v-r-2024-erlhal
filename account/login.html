@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/desktop.css">
+    <link rel="stylesheet" href="../styles/desktop.css" />
+    <script type="module" src="../modules/index_login.js"></script>
   </head>
-  <body>
+  <body id="loginBody">
     <header>
       <a href="../index.html">index</a>
       <a href="login.html">login</a>
@@ -14,19 +15,24 @@
     <main>
       <div class="loginCard">
         <h1>login</h1>
-        <form class="login" action="#">
-          <div class="inputWrapper">
-              <input id="email" type="email" name="email" placeholder="Email" />
-          </div>
-          <div class="inputWrapper">
-              <input id="password" type="password" name="password" placeholder="Password" />
-          </div>
-          <div class="actions">
-              <a href="registrer.html">Register</a>
-              <button type="button" class="btn" onClick="toggleHidden()">
-                  Login
-              </button>
-        </form>
+
+        <div class="inputWrapper">
+          <input id="email" type="email" name="email" placeholder="Email" />
+        </div>
+
+        <div class="inputWrapper">
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+
+        <div class="actions">
+          <a href="#"> Register </a>
+          <button type="button" class="btn loginBtn">Login</button>
+        </div>
       </div>
     </main>
   </body>
