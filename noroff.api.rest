@@ -1,0 +1,44 @@
+
+
+
+POST https://v2.api.noroff.dev/auth/login
+Content-Type: application/json
+
+{
+    "email": "erlhal01002@stud.noroff.no",
+    "password": "fisketur2024"
+}
+
+
+
+#####
+
+
+POST https://v2.api.noroff.dev/blog/posts/erlhal
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXJsaGFsIiwiZW1haWwiOiJlcmxoYWwwMTAwMkBzdHVkLm5vcm9mZi5ubyIsImlhdCI6MTcxNDkzNzU2NH0.BYRkNhL-I5A0ERb3_kG_wCgLpXelc9Vy_CUbgC-2AHE
+
+{
+    "title": "sånnja"
+}
+
+####
+
+GET https://v2.api.noroff.dev/blog/posts/erlhal
+
+####
+
+PUT https://v2.api.noroff.dev/blog/posts/erlhal/b126cbed-96d5-481d-a6cc-02ed32725365
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXJsaGFsIiwiZW1haWwiOiJlcmxoYWwwMTAwMkBzdHVkLm5vcm9mZi5ubyIsImlhdCI6MTcxNDkzNzU2NH0.BYRkNhL-I5A0ERb3_kG_wCgLpXelc9Vy_CUbgC-2AHE
+
+{
+    "title": "This is my first post",
+    "body": "Well, this is actually my second post"
+
+}
+
+###
+
+DELETE https://v2.api.noroff.dev/blog/posts/erlhal/3c3f1ec4-6c38-436a-acb9-17388f91c702
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXJsaGFsIiwiZW1haWwiOiJlcmxoYWwwMTAwMkBzdHVkLm5vcm9mZi5ubyIsImlhdCI6MTcxNDkzNzU2NH0.BYRkNhL-I5A0ERb3_kG_wCgLpXelc9Vy_CUbgC-2AHE

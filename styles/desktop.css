@@ -41,11 +41,22 @@ body {
   padding: 0;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--color-mantle);
   color: var(--color-text);
   font-family: "Oswald", sans-serif;
 }
-
+/*header {
+  flex: 1;
+}
+main {
+  flex: 3;
+}
+footer {
+  flex: 1;
+}*/
 .headerCol {
   display: flex;
   width: 50%;
@@ -95,10 +106,10 @@ img {
 }
 .slider_content {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
+  max-height: 300px;
   transform: translate(-50%, -50%);
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -151,14 +162,12 @@ img {
 }
 .mainBanner {
   display: flex;
-  height: 100px;
   background-color: var(--secondaryColor);
   margin-bottom: 10px;
   justify-content: space-between;
 }
 .mainBannerColumn {
   color: var(--textColor);
-  height: 100%;
   border: 2px solid black;
 }
 .GS {
@@ -285,4 +294,9 @@ a {
   color: var(--color-blue);
   text-decoration: none;
   font-size: 1em;
+}
+
+.footerRow {
+  border: 2px solid yellow;
+  top: 100%;
 }

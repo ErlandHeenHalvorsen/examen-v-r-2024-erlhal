@@ -45,6 +45,12 @@
 //}
 const mainRow = document.querySelector(`.mainRow`);
 
+let res = await fetch("https://v2.api.noroff.dev/blog/posts/erlhal");
+
+res = await res.json();
+
+console.log(res);
+
 function generateCard() {
   let html = "";
   for (let i = 0; i < 6; i++) {
@@ -84,4 +90,5 @@ function generateCard() {
   }
   return html;
 }
+
 export default generateCard;
