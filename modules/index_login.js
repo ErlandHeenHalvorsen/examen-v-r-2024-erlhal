@@ -4,6 +4,8 @@ const passwordInput = document.querySelector("#password");
 const loginButton = document.querySelector(".loginBtn");
 
 async function submitForm() {
+  loginButton.disable = true;
+
   const data = {
     email: emailInput.value,
     password: passwordInput.value,
@@ -21,6 +23,7 @@ async function submitForm() {
 
   if (res.data.accessToken) {
     localStorage.setItem("token", JSON.stringify(res.data.accessToken));
+    window.location.href = "/index.html";
   } else {
     console.log("no token");
   }
