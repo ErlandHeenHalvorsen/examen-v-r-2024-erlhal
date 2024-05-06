@@ -300,3 +300,26 @@ a {
   border: 2px solid yellow;
   top: 100%;
 }
+
+/*---------------------------------*/
+
+.makeForm {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  border: 2px solid yellow;
+  min-height: 700px;
+  margin: 0 40px 0 40px;
+}
+#formTitle {
+  flex: 1;
+}
+#formBody {
+  flex: 5;
+}
+.formButtonContainer {
+  flex: 1;
+}
+.formInput {
+  text-transform: ;
+}

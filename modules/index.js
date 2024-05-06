@@ -4,4 +4,4 @@ import generateCard from "./cards.js";
 
 CarouselInit();
 const mainRow = document.querySelector(`.mainRow`);
-mainRow.innerHTML = generateCard();
+//mainRow.innerHTML = generateCard();

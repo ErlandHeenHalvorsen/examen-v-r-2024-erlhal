@@ -16,7 +16,32 @@
       </div>
     </header>
     <main>
-      <div></div>
+      <div class="makeForm">
+        <!-- <img id="mediaForm" src="" alt="" /> -->
+        <input
+          class="formInput"
+          type="text"
+          name="title"
+          id="formTitle"
+          placeholder="Title"
+        />
+        <input
+          class="formInput"
+          type="textarea"
+          name="body"
+          id="formBody"
+          placeholder="Let's make a post"
+        />
+        <div class="formMedia">
+          <input type="text" id="formUrl" name="media" placeholder="img URL" />
+          <input type="text" id="formAlt" name="alt" placeholder="img ALT" />
+        </div>
+        <div class="formButtonContainer">
+          <button class="formButton formButtonDelete">DELETE</button>
+          <button class="formButton formButtonPost">POST</button>
+        </div>
+      </div>
+      <div class="messages"></div>
     </main>
     <footer>
       <div class="footerRow">
