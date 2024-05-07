@@ -347,6 +347,10 @@ a {
   transition: 0.3s;
 }
 
+.game-title {
+  display: flex;
+  border: 2px solid red;
+}
 .card-container {
   display: flex;
   flex-direction: column;
@@ -367,8 +371,4 @@ a {
 }
 .card-container-col {
   display: flex;
-}
-.game-title {
-  display: flex;
-  border: 2px solid red;
 }
