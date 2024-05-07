@@ -157,9 +157,9 @@ img {
   font-size: 40px;
   color: var(--textColor);
 }
-.slider_text {
+/*.slider_text {
   padding: ;
-}
+}*/
 .mainBanner {
   display: flex;
   background-color: var(--secondaryColor);
@@ -220,6 +220,11 @@ img {
   font-size: 1.5em;
   font-weight: 200;
   padding: 10px 20px;
+  /* create ellipsis max 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .card button {
   width: 173px;
@@ -320,6 +325,50 @@ a {
 .formButtonContainer {
   flex: 1;
 }
-.formInput {
+/*.formInput {
   text-transform: ;
+}*/
+
+.messages {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.messages p {
+  display: flex;
+  text-align: center;
+  border: 2px solid var(--color-green);
+  border-radius: 6px;
+  background-color: var(--color-green);
+  color: var(--color-crust);
+  width: 400px;
+  padding: 20px 10px 20px 10px;
+  transform: translateY(-150%);
+  transition: 0.3s;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  border: 1px solid var(--ctaColor);
+  border-radius: 6px;
+  margin: auto;
+  box-shadow: 2px 3px 8px black;
+  transition: 0.3s;
+}
+.card-container-img {
+  object-fit: contain;
+}
+.card-container-row {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 20px;
+}
+.card-container-col {
+  display: flex;
+}
+.game-title {
+  display: flex;
+  border: 2px solid red;
 }

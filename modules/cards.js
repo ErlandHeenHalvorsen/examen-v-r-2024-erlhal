@@ -1,93 +1,40 @@
-////<div class="mainCol">
-////  <div class="card">
-////    <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
-////    <div class="cardBanner1">
-////      <h4>Red Dead Redemption 2</h4>
-////    </div>
-////    <div class="cardBanner2">
-////      <h4>10/10</h4>
-////    </div>
-////    <p>
-////      An epic journey trough the American wild midwest. One of the best gaming
-////      experiences i have had these last ten years.
-////    </p>
-////    <button>Read More</button>
-////  </div>
-////</div>;
-//
-//{
-//  "data": {
-//    "id": "string",
-//    "title": "string",
-//    "body": "string",
-//    "tags": ["string"],
-//    "media": {
-//      "url": "https://url.com/image.jpg",
-//      "alt": "string"
-//    },
-//    "created": "2022-09-04T08:08:38.830Z",
-//    "updated": "2022-09-04T08:08:38.830Z",
-//    "author": {
-//      "name": "string",
-//      "email": "string",
-//      "bio": "string",
-//      "avatar": {
-//        "url": "https://url.com/image.jpg",
-//        "alt": "string"
-//      },
-//      "banner": {
-//        "url": "https://url.com/image.jpg",
-//        "alt": "string"
-//      }
-//    }
-//  },
-//  "meta": {}
-//}
-const mainRow = document.querySelector(`.mainRow`);
-
-let res = await fetch("https://v2.api.noroff.dev/blog/posts/erlhal");
-
-res = await res.json();
-
-console.log(res);
-
-function generateCard() {
+function ratings(ratingsArray) {
   let html = "";
-  for (let i = 0; i < 6; i++) {
-    html += `<div class="mainCol">
-  <div class="card">
-    <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
-    <div class="cardBanner1">
-      <h4>Red Dead Redemption 2</h4>
-    </div>
-    <div class="cardBanner2">
-      <h4>10/10</h4>
-    </div>
-    <p>
-      An epic journey trough the American wild midwest. One of the best gaming
-      experiences i have had these last ten years.
-    </p>
-    <button>Read More</button>
-  </div>
-</div>
-<div class="mainCol">
-  <div class="card">
-    <img class="cardImg" src="img/rdr2-afis-900x563.webp" alt="" />
-    <div class="cardBanner1">
-      <h4>Red Dead Redemption 2</h4>
-    </div>
-    <div class="cardBanner2">
-      <h4>10/10</h4>
-    </div>
-    <p>
-      An epic journey trough the American wild midwest. One of the best gaming
-      experiences i have had these last ten years.
-    </p>
-    <button>Read More</button>
-  </div>
-</div>
-`;
-  }
+  ratingsArray.map((rating) => {
+    html += `<span>${rating}</span>`;
+  });
+  return html;
+}
+
+async function generateCard() {
+  let res = await fetch("https://v2.api.noroff.dev/blog/posts/erlhal");
+  res = await res.json();
+
+  let html = "";
+  res.data.map((post) => {
+    html += `
+      <div class="mainCol">
+        <div class="card">
+          <img class="cardImg" src="${post.media ? post.media.url : ""}" alt="${
+      post.media ? post.media.alt : "Placeholder image"
+    }" />
+          <div class="cardBanner1">
+            <h4>${post.title}</h4>
+          </div>
+          <div class="cardBanner2">
+            ${post.tags ? ratings(post.tags) : "Not yet rated"}
+          </div>
+          <p>
+            ${post.body ? post.body : "Nothing to see"}
+          </p>
+          <button class="read-more-button" data-id="${
+            post.id
+          }">Read More</button>
+        </div>
+      </div>
+    `;
+  });
+
   return html;
 }
 

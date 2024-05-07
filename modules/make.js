@@ -34,10 +34,10 @@ async function makePost(body) {
     console.log(result);
 
     if (result.ok) {
-      // let parsedRes = await result.json();
+      //let parsedRes = await result.json();
       messages.innerHTML = `
-        <div class="">
-          Post created successfully!
+        <div class="messages">
+          <p>Post created successfully!</p>
         </div>
       `;
     } else {
@@ -70,16 +70,16 @@ async function deletePost() {
   token = JSON.parse(token);
   let posts = await fetch("https://v2.api.noroff.dev/blog/posts/erlhal");
   posts = await posts.json();
-  posts = posts.data;
-  //  posts.map(async (p) => {
-  //     await fetch(`https://v2.api.noroff.dev/blog/posts/erlhal/${p.id}`, {
-  //       method: "DELETE",
-  //       headers: {
-  //         "content-Type": "application/json",
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     });
+  // posts = posts.data;
+  // posts.map(async (p) => {
+  //   await fetch(`https://v2.api.noroff.dev/blog/posts/erlhal/${p.id}`, {
+  //     method: "DELETE",
+  //     headers: {
+  //       "content-Type": "application/json",
+  //       Authorization: `Bearer ${token}`,
+  //     },
   //   });
+  // });
   console.log(posts);
 }
 //deletePost();
