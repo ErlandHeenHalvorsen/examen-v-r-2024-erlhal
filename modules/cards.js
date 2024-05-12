@@ -15,9 +15,9 @@ async function generateCard() {
     html += `
       <div class="mainCol">
         <div class="card">
-          <img class="cardImg" src="${post.media ? post.media.url : ""}" alt="${
-      post.media ? post.media.alt : "Placeholder image"
-    }" />
+          <img class="cardImg" src="${
+            post.media ? post.media.url : "/img/gameOver.jpg"
+          }" alt="${post.media ? post.media.alt : "Placeholder image"}" />
           <div class="cardBanner1">
             <h4>${post.title}</h4>
           </div>

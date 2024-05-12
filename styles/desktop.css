@@ -1,35 +1,5 @@
-:root {
-  --primaryColor: #00171f;
-  --secondaryColor: #c5071b;
-  --textColor: #e1efe6;
-  --ctaColor: #f48e2b;
-  --color-rosewater: #f5e0dc;
-  --color-flamingo: #f2cdcd;
-  --color-pink: #f5c2e7;
-  --color-mauve: #cba6f7;
-  --color-red: #f38ba8;
-  --color-maroon: #eba0ac;
-  --color-peach: #fab387;
-  --color-yellow: #f9e2af;
-  --color-green: #a6e3a1;
-  --color-teal: #94e2d5;
-  --color-sky: #89dceb;
-  --color-sapphire: #74c7ec;
-  --color-blue: #89b4fa;
-  --color-lavender: #b4befe;
-  --color-text: #cdd6f4;
-  --color-subtext1: #bac2de;
-  --color-subtext0: #a6adc8;
-  --color-overlay2: #9399b2;
-  --color-overlay1: #7f849c;
-  --color-overlay0: #6c7086;
-  --color-surface2: #585b70;
-  --color-surface1: #45475a;
-  --color-surface0: #313244;
-  --color-base: #1e1e2e;
-  --color-mantle: #181825;
-  --color-crust: #11111b;
-}
+@import url("./colorTheme.css");
+@import url("./mobile.css");
 * {
   box-sizing: border-box;
 }
@@ -42,7 +12,7 @@ body {
 }
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: space-between;
   background-color: var(--color-mantle);
   color: var(--color-text);
@@ -129,17 +99,6 @@ img {
   right: 0;
 }
 
-.mainRow {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.cardImg {
-  max-width: 600px;
-}
 .sliderCTA {
   font-size: 30px;
   background-color: rgb(0, 0, 0, 0.1);
@@ -185,10 +144,27 @@ img {
   background-color: var(--ctaColor);
   border-radius: 6px;
 }
+.mainRow {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 
+.cardImg {
+  max-width: 600px;
+}
+
+.mainCol {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
 .card {
   display: flexbox;
   width: 500px;
+
   transform: scale(90%);
   border: 2px solid var(--ctaColor);
   border-radius: 6px;
@@ -354,6 +330,7 @@ a {
 .card-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 900px;
   border: 1px solid var(--ctaColor);
   border-radius: 6px;
@@ -362,8 +339,11 @@ a {
   transition: 0.3s;
 }
 .card-container-img {
-  object-fit: contain;
+  object-fit: cover;
+  max-height: 400px;
+  object-position: 50% 50%;
 }
+
 .card-container-row {
   display: flex;
   flex-direction: column;
