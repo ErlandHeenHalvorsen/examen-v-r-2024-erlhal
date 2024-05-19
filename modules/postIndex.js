@@ -1,4 +1,5 @@
 import { baseUrl } from "./constants.js";
+import getIdFromUrl from "./url.js";
 
 const cardImg = document.querySelector(`.card-container-img`);
 const gameTitle = document.querySelector(`.game-title`);
@@ -6,10 +7,7 @@ const gameRating = document.querySelector(`.game-rating`);
 const cardText = document.querySelector(`.card-text`);
 ///
 
-const params = new URLSearchParams(document.location.search);
-const id = params.get("id");
-console.log(params);
-console.log(id);
+const id = getIdFromUrl();
 
 async function getIndexCard() {
   let res = await fetch(`${baseUrl}/blog/posts/erlhal/${id}`);

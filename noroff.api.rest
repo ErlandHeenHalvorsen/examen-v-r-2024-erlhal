@@ -38,7 +38,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXJsaGFsI
 
 }
 
-###
+####
 
 DELETE https://v2.api.noroff.dev/blog/posts/erlhal/3c3f1ec4-6c38-436a-acb9-17388f91c702
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZXJsaGFsIiwiZW1haWwiOiJlcmxoYWwwMTAwMkBzdHVkLm5vcm9mZi5ubyIsImlhdCI6MTcxNDkzNzU2NH0.BYRkNhL-I5A0ERb3_kG_wCgLpXelc9Vy_CUbgC-2AHE

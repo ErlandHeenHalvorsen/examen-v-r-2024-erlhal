@@ -12,7 +12,7 @@ body {
 }
 body {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-between;
   background-color: var(--color-mantle);
   color: var(--color-text);
@@ -153,7 +153,7 @@ img {
 }
 
 .cardImg {
-  max-width: 600px;
+  object-fit: contain;
 }
 
 .mainCol {
@@ -164,6 +164,7 @@ img {
 .card {
   display: flexbox;
   width: 500px;
+  max-height: 700px;
 
   transform: scale(90%);
   border: 2px solid var(--ctaColor);
@@ -351,4 +352,23 @@ a {
 }
 .card-container-col {
   display: flex;
+}
+
+.edit-list {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid yellow;
+  width: 100vw;
+}
+.edit-list-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 10px 10px;
+}
+.edit-list-button {
+  padding: 5px 10px;
 }
