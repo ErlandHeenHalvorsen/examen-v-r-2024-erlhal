@@ -30,21 +30,25 @@ footer {
 .headerCol {
   display: flex;
   width: 50%;
-  min-width: 400px;
+  min-width: 500px;
   height: 110px;
   border-radius: 0px 0px 12px 0px;
   margin-bottom: 5px;
   background: #c5071b;
 }
-.headerCol h1 {
+.headerCol a {
   display: flexbox;
-  transform: translateY(-150%);
+  transform: translateY(-90%);
   color: var(--textColor);
   -webkit-text-stroke: 4px black;
-  font-size: 4em;
+  font-size: 50px;
   padding: 0;
   margin-left: 5%;
   letter-spacing: -6px;
+  transition: ease 0.3s;
+}
+.headerCol a:hover {
+  scale: 101%;
 }
 .slider {
   overflow: hidden;
@@ -153,7 +157,8 @@ img {
 }
 
 .cardImg {
-  object-fit: contain;
+  object-fit: cover;
+  aspect-ratio: 16/8;
 }
 
 .mainCol {
@@ -278,29 +283,33 @@ a {
   font-size: 1em;
 }
 
-.footerRow {
-  border: 2px solid yellow;
-  top: 100%;
-}
-
 /*---------------------------------*/
 
 .makeForm {
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
-  border: 2px solid yellow;
+
   min-height: 700px;
   margin: 0 40px 0 40px;
 }
 #formTitle {
   flex: 1;
+  margin: 5px 0;
 }
 #formBody {
   flex: 5;
+  margin: 5px 0;
+  resize: none;
 }
 .formButtonContainer {
   flex: 1;
+}
+.formButtonPost {
+  margin: 10px 0px;
+  padding: 8px 20px;
+  font-weight: 700;
+  font-size: 15px;
 }
 /*.formInput {
   text-transform: ;
@@ -371,4 +380,56 @@ a {
 }
 .edit-list-button {
   padding: 5px 10px;
+}
+/*--------toolbox + footer--------*/
+.footerRow {
+  display: flex;
+  border: 2px solid yellow;
+  top: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerColumn {
+  padding: 5px 5px;
+  margin: 10px 20px;
+  & > p {
+    font-size: 20px;
+  }
+}
+.menu {
+  border: 2px solid var(--ctaColor);
+  width: 200px;
+  position: fixed;
+  bottom: -500px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  padding: 15px 10px;
+  background-color: var(--color-base);
+  color: var(--textColor);
+  transition-duration: 0.6s;
+  & > a {
+    color: var(--textColor);
+    margin: 5px 0;
+  }
+  &.open {
+    bottom: 100px;
+    padding: 15px 10px;
+  }
+}
+.menu h4 {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--ctaColor);
+}
+
+.admin-tools {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+}
+#menuButton {
+  background-color: transparent;
+  border: none;
 }

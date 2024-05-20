@@ -22,7 +22,7 @@
     <header>
       <div class="headerRow">
         <div class="headerCol">
-          <h1>GameSphere</h1>
+          <a href="index.html" id="header-title"><h1>GameSphere</h1></a>
         </div>
       </div>
       <div class="slider">
@@ -69,7 +69,42 @@
         <div class="footerColumn">
           <p>this is a footer</p>
         </div>
+        <div class="footerColumn">
+          <nav id="menuContainer" class="menu">
+            <h4>Admin Tools</h4>
+            <a href="/index.html">Front page</a>
+            <a href="/account/login.html">Login</a>
+            <a href="/account/registrer.html">Register Admin</a>
+            <a href="/post/make.html">Make a post</a>
+            <a href="/post/edit.html">Edit/Delete</a>
+          </nav>
+          <button id="menuButton">
+            <img
+              class="admin-tools"
+              src="/img/toolbox-container-repair-box-tool-box-toolboxes-toolkit-tools-svgrepo-com.svg"
+              alt="Toolbox"
+            />
+          </button>
+        </div>
       </div>
     </footer>
+    <script>
+      const toggle = document.querySelector("#menuButton");
+      const menu = document.querySelector("#menuContainer");
+      const body = document.querySelector("body");
+
+      toggle.addEventListener("click", (event) => {
+        event.preventDefault();
+        menu.classList.toggle("open");
+      });
+      document.addEventListener("click", (event) => {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickOnToggle = toggle.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle) {
+          menu.classList.remove("open");
+        }
+      });
+    </script>
   </body>
 </html>
