@@ -5,17 +5,27 @@ const editCol = document.querySelector(".edit-list-col");
 const editTitle = document.querySelector(".edit-list-title");
 const editButton = document.querySelector(".edit-list-edit");
 let deleteButtons;
+let editButtons;
 ///
 // const id = getIdFromUrl();
 
 function buttonListeners() {
   deleteButtons = document.querySelectorAll(".edit-list-delete");
+  editButtons = document.querySelectorAll(".edit-list-edit");
   deleteButtons.forEach((button) => {
     button.addEventListener("click", async (event) => {
       event.preventDefault();
 
       let id = button.getAttribute("data-id");
       deleteCard(id);
+    });
+  });
+  editButtons.forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      let id = button.getAttribute("data-id");
+      const nextLocation = `/post/post_edit.html?id=${id}`;
+      window.location.href = nextLocation;
     });
   });
 }
@@ -31,7 +41,7 @@ async function makeEditList() {
       <div class="edit-list-row">
         <div class="edit-list-col edit-list-title">${post.title}</div>
         <div class="edit-list-col">
-          <button class="edit-list-button edit-list-edit">Edit</button>
+          <button class="edit-list-button edit-list-edit" data-id="${post.id}">Edit</button>
           <button class="edit-list-button edit-list-delete" data-id="${post.id}">Delete</button>
         </div>
       </div>
@@ -68,3 +78,5 @@ async function deleteCard(id) {
     }
   }
 }
+
+async function redirectToEditPost() {}
