@@ -78,5 +78,3 @@ async function deleteCard(id) {
     }
   }
 }
-
-async function redirectToEditPost() {}

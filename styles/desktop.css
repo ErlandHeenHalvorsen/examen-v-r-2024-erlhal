@@ -224,12 +224,15 @@ img {
 /*-------------Account---------Account-------------------*/
 #loginBody {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
 }
 button,
 a {
   cursor: pointer;
+}
+.login-card-container {
+  display: flex;
+  justify-content: center;
 }
 .loginCard {
   width: 100%;
@@ -434,6 +437,7 @@ a {
 }
 
 /*--------toolbox + footer--------*/
+
 .footerRow {
   display: flex;
   border: 2px solid yellow;
