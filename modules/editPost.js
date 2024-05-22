@@ -1,7 +1,7 @@
 import { baseUrl } from "./constants.js";
 import getIdFromUrl from "./url.js";
 ///
-const editTitle = document.querySelector(`#title-imput`);
+const editTitle = document.querySelector(`#title-input`);
 const editBody = document.querySelector(`#body-input`);
 const editUrl = document.querySelector(`#edit-url-input`);
 const editAlt = document.querySelector(`#edit-alt-input`);
@@ -26,18 +26,22 @@ async function updatePost(body) {
     console.log(res);
   }
 }
-updateButton.addEventListener("click", async () => {
-  const update = {
-    title: editTitle.value,
-    body: editBody.value.length > 0 ? editBody.value : null,
-    media:
-      editUrl.value.length > 0
-        ? {
-            url: editUrl.value,
-            alt: editAlt.value.length > 0 ? editAlt.value : null,
-          }
-        : null,
-  };
-  console.log(update);
-  await updatePost(update);
-});
+function editButtonSubmit() {
+  updateButton.addEventListener("click", async () => {
+    const update = {
+      title: editTitle.value,
+      body: editBody.value.length > 0 ? editBody.value : null,
+      media:
+        editUrl.value.length > 0
+          ? {
+              url: editUrl.value,
+              alt: editAlt.value.length > 0 ? editAlt.value : null,
+            }
+          : null,
+    };
+    console.log(update);
+    await updatePost(update);
+    window.location.href = "/post/edit.html";
+  });
+}
+editButtonSubmit();
