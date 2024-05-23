@@ -48,33 +48,38 @@ async function makeEditList() {
     </div>
     `;
   });
-  document.querySelector("main").innerHTML = html;
+  document.querySelector(".edit-list-container").innerHTML = html;
   buttonListeners();
 }
 makeEditList();
 
 async function deleteCard(id) {
-  let token = localStorage.getItem("token");
+  const isConfirmed = confirm("Are you sure?");
+  if (!isConfirmed) {
+    let token = localStorage.getItem("token");
 
-  if (token) {
-    token = JSON.parse(token);
+    if (token) {
+      token = JSON.parse(token);
 
-    let result = await fetch(`${baseUrl}/blog/posts/erlhal/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    if (result.ok) {
-      const posts = document.querySelectorAll(".edit-list");
-      posts.forEach((post) => {
-        const postId = post.getAttribute("data-id");
-        if (postId === id) {
-          post.remove();
-        }
+      let result = await fetch(`${baseUrl}/blog/posts/erlhal/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
       });
-      alert("This has deleted the post");
+      if (result.ok) {
+        const posts = document.querySelectorAll(".edit-list");
+        posts.forEach((post) => {
+          const postId = post.getAttribute("data-id");
+          if (postId === id) {
+            post.remove();
+          }
+        });
+        alert("This has deleted the post");
+      }
     }
+  } else {
+    alert("Post NOT deleted");
   }
 }

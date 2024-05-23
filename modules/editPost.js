@@ -39,9 +39,12 @@ function editButtonSubmit() {
             }
           : null,
     };
-    console.log(update);
-    await updatePost(update);
-    window.location.href = "/post/edit.html";
+    if (update.title) {
+      await updatePost(update);
+      window.location.href = "/post/edit.html";
+    } else {
+      alert("Title needed");
+    }
   });
 }
 editButtonSubmit();
