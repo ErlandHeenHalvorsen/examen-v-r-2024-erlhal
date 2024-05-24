@@ -21,3 +21,9 @@ blog feed page, so I can easily select which post to read.
 
 6 - As a user, I want each thumbnail in the blog post feed to be clickable, taking me to the blog post
 page to read more.
+
+Hollow knight
+celeste
+counter strike 2
+Track Mania
+boarderlands

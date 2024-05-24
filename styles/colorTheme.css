@@ -1,8 +1,8 @@
 :root {
   --primaryColor: #00171f;
-  --secondaryColor: #c5071b;
+  --secondaryColor: hsl(0, 80%, 20%);
   --textColor: #e1efe6;
-  --ctaColor: #f48f2b;
+  --ctaColor: hsl(30, 60%, 50%);
   --color-rosewater: #f5e0dc;
   --color-flamingo: #f2cdcd;
   --color-pink: #f5c2e7;

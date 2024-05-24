@@ -1,5 +1,6 @@
 import { baseUrl } from "./constants.js";
 import getIdFromUrl from "./url.js";
+import { fetchPost } from "./url.js";
 ///
 const editTitle = document.querySelector(`#title-input`);
 const editBody = document.querySelector(`#body-input`);
@@ -26,7 +27,13 @@ async function updatePost(body) {
     console.log(res);
   }
 }
-function editButtonSubmit() {
+async function editButtonSubmit() {
+  let fetchPostData = await fetchPost(id);
+  editTitle.value = fetchPostData.title;
+  editBody.value = fetchPostData.body;
+  editUrl.value = fetchPostData.media ? fetchPostData.media.url : null;
+  editAlt.value = fetchPostData.media ? fetchPostData.media.alt : null;
+
   updateButton.addEventListener("click", async () => {
     const update = {
       title: editTitle.value,

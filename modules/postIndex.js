@@ -5,14 +5,19 @@ const cardImg = document.querySelector(`.card-container-img`);
 const gameTitle = document.querySelector(`.game-title`);
 const gameRating = document.querySelector(`.game-rating`);
 const cardText = document.querySelector(`.card-text`);
-///
 
 const id = getIdFromUrl();
 
-async function getIndexCard() {
-  let res = await fetch(`${baseUrl}/blog/posts/erlhal/${id}`);
+async function fetchPost(postId) {
+  let res = await fetch(`${baseUrl}/blog/posts/erlhal/${postId}`);
   res = await res.json();
   let data = res.data;
+  return data;
+}
+
+async function getIndexCard() {
+  let data = await fetchPost(id);
+  let body = data.body.replace(/\\n/gm, "<br><br>");
   console.log(data);
   gameTitle.innerHTML = data.title;
   if (data.media) {
@@ -22,7 +27,7 @@ async function getIndexCard() {
     cardImg.setAttribute("src", "/img/gameOver.jpg");
   }
   if (data.body) {
-    cardText.innerHTML = data.body;
+    cardText.innerHTML = body;
   } else {
     cardText.innerHTML = `
     <p>This post is empty. Maybe something is being worked on?</p> 
@@ -32,10 +37,4 @@ async function getIndexCard() {
 }
 getIndexCard();
 
-/* let res = await fetch(`${baseUrl}/blog/posts/erlhal/${id}`, {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-console.log(res); */
+export default fetchPost;

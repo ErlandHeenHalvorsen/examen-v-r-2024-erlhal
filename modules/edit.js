@@ -55,7 +55,7 @@ makeEditList();
 
 async function deleteCard(id) {
   const isConfirmed = confirm("Are you sure?");
-  if (!isConfirmed) {
+  if (isConfirmed) {
     let token = localStorage.getItem("token");
 
     if (token) {

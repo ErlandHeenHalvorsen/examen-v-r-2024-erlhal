@@ -1,5 +1,13 @@
 @media screen and (max-width: 500px) {
   .card-container-img {
-    
+  }
+  h1 {
+    display: flex;
+    scale: 30%;
+    align-self: left;
+  }
+  .card {
+    scale: 70%;
+    margin: 0;
   }
 }
