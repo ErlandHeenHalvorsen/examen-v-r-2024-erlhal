@@ -19,7 +19,7 @@ async function getIndexCard() {
   let data = await fetchPost(id);
   let body = data.body.replace(/\\n/gm, "<br><br>");
   console.log(data);
-  gameTitle.innerHTML = data.title;
+  gameTitle.innerHTML = `<h2>${data.title}</h2>`;
   if (data.media) {
     cardImg.setAttribute("src", data.media.url);
     cardImg.setAttribute("alt", data.media.alt);

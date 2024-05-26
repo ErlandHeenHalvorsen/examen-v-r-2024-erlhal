@@ -18,15 +18,12 @@ body {
   color: var(--color-text);
   font-family: "Oswald", sans-serif;
 }
-/*header {
-  flex: 1;
+header {
+  border: 2px solid var(--color-base);
+  background-color: var(--color-base);
+  margin-bottom: 10px;
 }
-main {
-  flex: 3;
-}
-footer {
-  flex: 1;
-}*/
+
 .headerCol {
   display: flex;
   width: 50%;
@@ -180,37 +177,36 @@ img {
   padding-bottom: 20px;
   margin: auto;
   box-shadow: 2px 3px 8px black;
-  transition: 0.3s;
+  transition: ease 0.4s;
 }
 .card:hover {
-  scale: 101%;
+  scale: 108%;
+  & > p {
+    -webkit-line-clamp: 7;
+  }
 }
-.cardBanner1,
-.cardBanner2 {
-  display: inline-block;
-  font-size: 2em;
-}
+
 .cardBanner1 {
   background-color: var(--secondaryColor);
-  width: 70%;
-  margin-right: 10%;
+  width: fit-content;
   border-radius: 0 0 10px;
 }
 .cardBanner1 h4 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   overflow: hidden;
+  padding: 10px 20px;
   margin: 0;
   font-size: 28px;
   color: var(--textColor);
   -webkit-text-stroke: 2px black;
+  transition: ease 0.4s;
 }
 .card p {
   font-size: 1.5em;
   font-weight: 200;
   padding: 10px 20px;
-  /* create ellipsis max 3 lines */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -226,10 +222,17 @@ img {
   align-self: center;
 }
 /*--------post-index--------*/
+.container-index {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
 .card-container-index {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
+  width: 100%;
   border: 2px solid var(--ctaColor);
   margin: 10px 20px;
   border-radius: 8px;
@@ -237,18 +240,26 @@ img {
 }
 
 .game-title {
-  font-size: 30px;
-  font-weight: 600;
-  margin: 20px 0 0 0;
-  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+  background-color: var(--secondaryColor);
+  width: fit-content;
+  border-radius: 0 0 8px;
+  & h2 {
+    font-size: 45px;
+    font-weight: 600;
+    -webkit-text-stroke: 2px black;
+    letter-spacing: -4px;
+  }
 }
 .card-text {
   object-fit: contain;
   line-height: 1.6;
-  word-wrap: break-word;
-  max-width: 900px;
+  max-width: 1100px;
   text-align: left;
-  padding: 5px 0px;
+  padding: 10px 0px;
+  font-size: 25px;
 }
 /*-------------Account---------Account-------------------*/
 /*-------------Account---------Account-------------------*/
@@ -452,8 +463,9 @@ a {
   align-items: center;
   border-radius: 8px;
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
   min-width: 250px;
+  height: fit-content;
 }
 .edit-post-card h2 {
   border-bottom: 1px solid var(--ctaColor);
@@ -471,28 +483,40 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 5px 5px;
-  margin: 5px 5px;
+  padding: 20px 5px;
 }
 #body-input {
   width: 100%;
-  max-width: 300px;
-  height: 200px;
+  max-width: 750px;
+  height: 600px;
   resize: none;
   border-radius: 6px;
+  font-size: 20px;
 }
 .edit-input {
   width: 100%;
-  max-width: 300px;
-  height: 30px;
+  max-width: 400px;
+  height: 40px;
   border-radius: 6px;
+  font-size: 20px;
+}
+.edit-post-button {
+  padding: 5px 10px;
+  background-color: var(--ctaColor);
+  border: 2px solid var(--color-base);
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 /*--------toolbox + footer--------*/
-
+footer {
+  margin-top: 10px;
+  background-color: var(--color-base);
+}
 .footerRow {
   display: flex;
-  border: 2px solid yellow;
+  border: 2px solid var(--color-base);
   top: 100%;
   justify-content: space-between;
   align-items: center;
