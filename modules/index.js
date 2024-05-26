@@ -3,6 +3,7 @@ import CarouselInit from "./carousell.js";
 import generateCard from "./cards.js";
 
 async function loadIndex() {
+ 
   CarouselInit();
   const mainRow = document.querySelector(`.mainRow`);
   mainRow.innerHTML = await generateCard();
