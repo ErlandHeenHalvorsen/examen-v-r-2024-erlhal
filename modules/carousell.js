@@ -1,3 +1,7 @@
+import { fetchCarouselPosts } from "./url.js";
+
+const slideInner = document.querySelector('.slide__inner');
+
 let slider;
 let slideLeft;
 let slideMin;
@@ -31,7 +35,35 @@ function autoSlider() {
   }, 5000);
 }
 
+async function generateSlides() {
+  const latestPosts = await fetchCarouselPosts();
+  console.log(latestPosts);
+
+  let html = "";
+
+  latestPosts.map((post) => {
+    html += `
+      <div class="slider__item">
+        <img
+          src="${post.media.url}"
+        />
+        <div class="slider_content">
+          <span class="slider_title">${post.title}</span>
+          <p class="slider_text">
+            ${post.body}
+          </p>
+          <button class="sliderCTA">Button</button>
+        </div>
+      </div>
+    `;
+  });
+
+  slideInner.innerHTML = html;
+}
+
 function CarouselInit() {
+  generateSlides();
+
   slider = document.querySelector(".slide__inner");
   const prevButton = document.querySelector(".previous_slide");
   const nextButton = document.querySelector(".next_slide");

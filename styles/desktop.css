@@ -1,5 +1,6 @@
 @import url("./colorTheme.css");
 @import url("./mobile.css");
+
 * {
   box-sizing: border-box;
 }
@@ -28,16 +29,17 @@ header {
   display: flex;
   max-width: 100%;
   width: fit-content;
+  align-items: center;
+  max-height: 200px;
   border-radius: 0px 0px 12px 0px;
   margin-bottom: 5px;
   background: #c5071b;
 }
 .headerCol a {
-  display: flexbox;
-  transform: translateY(-90%);
+  display: flex;
   color: var(--textColor);
   -webkit-text-stroke: 4px black;
-  font-size: 50px;
+  font-size: 40px;
   padding: 10px 10px;
   letter-spacing: -6px;
   transition: ease 0.3s;
