@@ -27,3 +27,7 @@ celeste
 counter strike 2
 Track Mania
 boarderlands
+
+-- Need to make carousell dynamic, so that it shows the 3 latest posts
+-- need to make carousell buttons dynamic
+-- 

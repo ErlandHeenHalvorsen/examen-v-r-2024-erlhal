@@ -3,15 +3,43 @@
     margin: 0;
   }
   .headerCol {
-    max-width: 300px;
+    max-width: 100%;
+    height: fit-content;
+    max-height: 100px;
     width: fit-content;
     align-items: center;
     & > a {
       display: flex;
       font-size: 30px;
-      padding: 5px 10px;
+      font-weight: 900;
+      padding: 0 10px;
       transform: none;
       letter-spacing: -3px;
     }
+  }
+  .edit-list-row {
+    margin: 5px 0;
+    padding: 0;
+  }
+  .edit-list-title {
+    max-width: 185px;
+    width: fit-content;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .game-title {
+    padding: 5px 10px;
+    max-width: 70%;
+    width: fit-content;
+    & > h2 {
+      font-size: 40px;
+      -webkit-text-stroke: 1px black;
+    }
+  }
+  .card-text {
+    font-size: 20px;
   }
 }

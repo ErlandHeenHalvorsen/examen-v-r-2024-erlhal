@@ -26,9 +26,8 @@ header {
 
 .headerCol {
   display: flex;
+  max-width: 100%;
   width: fit-content;
-  max-width: 800px;
-  height: 110px;
   border-radius: 0px 0px 12px 0px;
   margin-bottom: 5px;
   background: #c5071b;
