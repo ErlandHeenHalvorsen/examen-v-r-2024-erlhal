@@ -1,13 +1,17 @@
 @media screen and (max-width: 500px) {
-  .card-container-img {
-  }
-  h1 {
-    display: flex;
-    scale: 30%;
-    align-self: left;
-  }
-  .card {
-    scale: 70%;
+  header {
     margin: 0;
+  }
+  .headerCol {
+    max-width: 300px;
+    width: fit-content;
+    align-items: center;
+    & > a {
+      display: flex;
+      font-size: 30px;
+      padding: 5px 10px;
+      transform: none;
+      letter-spacing: -3px;
+    }
   }
 }
