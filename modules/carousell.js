@@ -103,7 +103,7 @@ function CarouselInit() {
     autoPlay = true;
   });
 
-  //autoSlider();
+  autoSlider();
 }
 
 export default CarouselInit;
