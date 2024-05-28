@@ -27,7 +27,6 @@ async function submitForm() {
     console.log("no token");
   }
 }
-submitForm();
 
 loginButton.addEventListener(`click`, () => submitForm());
 passwordInput.addEventListener("keydown", (event) => {
