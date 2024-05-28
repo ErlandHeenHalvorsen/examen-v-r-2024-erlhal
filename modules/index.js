@@ -1,9 +1,9 @@
 import { baseUrl } from "./constants.js";
 import CarouselInit from "./carousell.js";
 import generateCard from "./cards.js";
+import { generateSlides } from "./carousell.js";
 
 async function loadIndex() {
- 
   CarouselInit();
   const mainRow = document.querySelector(`.mainRow`);
   mainRow.innerHTML = await generateCard();
@@ -11,9 +11,10 @@ async function loadIndex() {
   const allCardButtons = document.querySelectorAll(".read-more-button");
   allCardButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
+      event.preventDefault();
       const id = button.getAttribute("data-id");
-
-      window.location.href = `/post/index.html?id=${id}`;
+      const nextLocation = `/post/index.html?id=${id}`;
+      window.location.href = nextLocation;
     });
   });
 }

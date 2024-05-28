@@ -1,6 +1,6 @@
 import { fetchCarouselPosts } from "./url.js";
 
-const slideInner = document.querySelector('.slide__inner');
+const slideInner = document.querySelector(".slide__inner");
 
 let slider;
 let slideLeft;
@@ -52,13 +52,23 @@ async function generateSlides() {
           <p class="slider_text">
             ${post.body}
           </p>
-          <button class="sliderCTA">Button</button>
+          <button class="sliderCTA" data-id="${post.id}">Read More</button>
         </div>
       </div>
     `;
   });
 
   slideInner.innerHTML = html;
+
+  const buttonCta = document.querySelectorAll(".sliderCTA");
+  buttonCta.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const id = button.getAttribute("data-id");
+      const nextLocation = `/post/index.html?id=${id}`;
+      window.location.href = nextLocation;
+    });
+  });
 }
 
 function CarouselInit() {
@@ -93,7 +103,8 @@ function CarouselInit() {
     autoPlay = true;
   });
 
-  autoSlider();
+  //autoSlider();
 }
 
 export default CarouselInit;
+export { generateSlides };

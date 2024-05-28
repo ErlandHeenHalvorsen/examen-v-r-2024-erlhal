@@ -17,6 +17,22 @@
       letter-spacing: -3px;
     }
   }
+  .slider_content {
+    max-height: 100px;
+    & > .slider_text {
+      display: none;
+      background-color: none;
+    }
+    & > .slider_title {
+      font-size: 20px;
+    }
+    & > .sliderCTA {
+      scale: 50%;
+    }
+  }
+  .slide_button {
+    scale: 70%;
+  }
   .edit-list-row {
     margin: 5px 0;
     padding: 0;
