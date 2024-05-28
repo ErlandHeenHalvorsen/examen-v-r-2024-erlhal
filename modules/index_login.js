@@ -11,7 +11,7 @@ async function submitForm() {
     password: passwordInput.value,
   };
 
-  let res = await fetch("https://v2.api.noroff.dev/auth/login", {
+  let res = await fetch("http://v2.api.noroff.dev/auth/login", {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(data),
