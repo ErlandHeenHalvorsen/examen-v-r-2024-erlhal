@@ -16,13 +16,12 @@ async function submitForm() {
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(data),
   });
+  let result = await res.json();
 
-  res = await res.json();
+  console.log(result);
 
-  console.log(res);
-
-  if (res.data.accessToken) {
-    localStorage.setItem("token", JSON.stringify(res.data.accessToken));
+  if (result.data.accessToken) {
+    localStorage.setItem("token", JSON.stringify(result.data.accessToken));
     window.location.href = "/index.html";
   } else {
     console.log("no token");
