@@ -24,7 +24,6 @@ async function updatePost(body) {
       },
       body: JSON.stringify(body),
     });
-    console.log(res);
   }
 }
 async function editButtonSubmit() {

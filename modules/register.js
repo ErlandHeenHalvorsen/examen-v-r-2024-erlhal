@@ -17,9 +17,7 @@ async function registerAdmin() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  console.log(data);
   const result = await response.json();
-  console.log(result);
   return result;
 }
 registerButton.addEventListener("click", () => registerAdmin());

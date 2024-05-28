@@ -1,15 +1,3 @@
-// const deleteButton = document.querySelector(`.formButtonDelete`);
-///////////
-// const post = {
-//   title: "string", // Required
-//   body: "string", // Optional
-//   tags: ["string"], // Optional
-//   media: {
-//     url: "https://url.com/image.jpg",
-//     alt: "string",
-//   }, // Optional
-// };
-///////////
 const formTitle = document.querySelector(`#formTitle`);
 const formBody = document.querySelector(`#formBody`);
 const formUrl = document.querySelector(`#formUrl`);
@@ -31,10 +19,8 @@ async function makePost(body) {
       },
       body: JSON.stringify(body),
     });
-    console.log(result);
 
     if (result.ok) {
-      //let parsedRes = await result.json();
       messages.innerHTML = `
         <div class="messages">
           <p>Post created successfully!</p>
@@ -59,27 +45,5 @@ postButton.addEventListener("click", async () => {
           }
         : null,
   };
-  console.log(post);
   await makePost(post);
 });
-//makePost("my second post", "Hello everybody, i'm furby, your furry friend");
-//makePost("my third post", "Bye everybody, i'm furby, your furry friend");
-
-async function deletePost() {
-  let token = localStorage.getItem("token");
-  token = JSON.parse(token);
-  let posts = await fetch("https://v2.api.noroff.dev/blog/posts/erlhal");
-  posts = await posts.json();
-  // posts = posts.data;
-  // posts.map(async (p) => {
-  //   await fetch(`https://v2.api.noroff.dev/blog/posts/erlhal/${p.id}`, {
-  //     method: "DELETE",
-  //     headers: {
-  //       "content-Type": "application/json",
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   });
-  // });
-  console.log(posts);
-}
-//deletePost();

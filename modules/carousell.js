@@ -37,7 +37,6 @@ function autoSlider() {
 
 async function generateSlides() {
   const latestPosts = await fetchCarouselPosts();
-  console.log(latestPosts);
 
   let html = "";
 

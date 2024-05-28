@@ -7,7 +7,6 @@ const editButton = document.querySelector(".edit-list-edit");
 let deleteButtons;
 let editButtons;
 ///
-// const id = getIdFromUrl();
 
 function buttonListeners() {
   deleteButtons = document.querySelectorAll(".edit-list-delete");

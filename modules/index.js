@@ -20,7 +20,3 @@ async function loadIndex() {
 }
 
 loadIndex();
-
-// let res = await fetch("https://v2.api.noroff.dev/blog/posts/erlhal");
-// res = await res.json();
-// console.log(res);

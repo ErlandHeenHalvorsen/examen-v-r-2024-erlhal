@@ -18,13 +18,11 @@ async function submitForm() {
   });
   let result = await res.json();
 
-  console.log(result);
-
   if (result.data.accessToken) {
     localStorage.setItem("token", JSON.stringify(result.data.accessToken));
     window.location.href = "/index.html";
   } else {
-    console.log("no token");
+    console.error("no token");
   }
 }
 
